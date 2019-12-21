@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 /** component definitions */
@@ -26,6 +26,14 @@ export class NewCmpComponent implements OnInit {
   //two way data binding
   strName = 'pippo';
   firstName = this.strName;
+
+  //Input Variable
+  @Input() caption : string;  
+  @Input('phoneNo') phoneNo : string;  
+
+  //output
+  @Output('onSubmit') submitEvent = new EventEmitter<any>();
+  
 
   /** module constructor */
   constructor() { }

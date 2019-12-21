@@ -353,7 +353,8 @@
 
 <br>
 <!-- new-cmp component directive -->
-<app-new-cmp></app-new-cmp>
+<!-- input property-->
+<app-new-cmp [phoneNo]="9830098300"></app-new-cmp>
 
 <!-- show month value from var-->
 <br>
@@ -370,3 +371,16 @@
 
 <!-- not valid conditions -->
 <ng-template #condition1>Conditions is not valid.</ng-template>
+
+<h3>Two way data binding</h3>
+<br><br><br>
+<div>  
+  <div>  
+      <span>Enter Your Name </span>  
+      <input [(ngModel)]="val" type="text"/>  
+  </div>  
+  <div>  
+      <span>Your Name :- </span>  
+      <span>{{val}}</span>  
+  </div>  
+</div>  
