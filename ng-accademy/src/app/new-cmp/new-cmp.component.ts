@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 /** component definitions */
 @Component({
@@ -9,13 +10,29 @@ import { Component, OnInit } from '@angular/core';
 
 export class NewCmpComponent implements OnInit {
 
-  newComponent = 'Enter new component created';
+  newComponent = 'New component created';
+
+  //modelbinding: interpolation
+  interpolationProp ='Interpolation property';
+
+  //modelbinding: 
+  propertyProp = 'Property binding text';
+
+  //event binding
+  fnSubmit(){
+    console.log('Event binding click()');
+  }
+
+  //two way data binding
+  strName = 'pippo';
+  firstName = this.strName;
 
   /** module constructor */
   constructor() { }
 
   /*module init*/
   ngOnInit() {
+   console.log('ngInit for cmp');
   }
 
 }

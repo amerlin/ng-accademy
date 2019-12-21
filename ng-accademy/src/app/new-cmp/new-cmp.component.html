@@ -1,3 +1,20 @@
 <p>New-cmp components is working!</p>
 
 <b>{{newComponent}}</b>
+
+<h3>Model binding interpolation</h3>
+<span>{{interpolationProp}}</span>
+
+<h3>Model binding property</h3>
+<input type="text" [value]=propertyProp>
+
+<h3>Event binding</h3>
+<div>
+    <input type="submit" value="Submit" (click)="fnSubmit()">
+</div>
+
+<h3>Two ways data binding</h3>
+<div>
+    <input type="text" [(ngModel)]="strName"/>
+    <input type=”text” [(ngModel)]="strName"/>
+</div>
