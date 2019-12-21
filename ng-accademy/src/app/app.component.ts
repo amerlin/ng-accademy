@@ -13,6 +13,12 @@ export class AppComponent {
   isAvailable = false;
   /*public value */
   public val = 'This is alert popup message from parent.';
+  showColor = false;
+
+  public changeColor(): void {
+    this.showColor = !this.showColor;
+ }
+
 
   // data from child
   public onSignup(data: any): void {
