@@ -12,5 +12,14 @@ export class AppComponent {
   months = ['Jan', 'Feb', 'March', 'April'];
   isAvailable = false;
   /*public value */
-  public val = '';
+  public val = 'This is alert popup message from parent.';
+
+  // data from child
+  public onSignup(data: any): void {
+    let strMessage: string = 'Thanks for Signup ' + data.name + '. ';
+    strMessage += 'Email id ' + data.email + ' has been registered successfully.';
+    alert(strMessage);
+  }
 }
+
+

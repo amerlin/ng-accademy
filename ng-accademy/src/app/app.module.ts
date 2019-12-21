@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NewCmpComponent } from './new-cmp/new-cmp.component';
 import { FormsModule } from '@angular/forms';
+import { MessageComponent } from './message/message.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewCmpComponent
+    NewCmpComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
